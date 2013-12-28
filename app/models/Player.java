@@ -2,15 +2,16 @@ package models;
 
 public class Player{
     public String name;
-    public Integer level;
+    public String level;
     public String className;
+    public Player(){}
 
-    public Player(String name, int level, String className){
+    public Player(String name, String level, String className){
         this.name = name;
-        this.level = new Integer(level);
+        this.level = level;
         this.className = className;
     }
-    public static Player createPlayer(String name, int level, String className){
+    public static Player createPlayer(String name, String level, String className){
         return new Player(name, level, className);
     }
 }
