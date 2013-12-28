@@ -1,8 +1,12 @@
 package models;
+import play.data.validation.Constraints;
 
 public class Player{
+    @Constraints.Required
     public String name;
+    @Constraints.Required
     public String level;
+    @Constraints.Required
     public String className;
     public Player(){}
 
