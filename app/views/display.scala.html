@@ -1,5 +1,17 @@
 @(players:List[Player])
     @main("Home"){
+        <script>
+            function del(urlToDelete){
+                $.ajax({
+                    url:urlToDelete,
+                    type: 'DELETE',
+                    success: function(results){
+                        location.reload();
+                    }
+                }
+                );
+            }
+        </script>
         <div class="page-header pager">
         <h1>Player List</h1>
         </div>
@@ -20,7 +32,7 @@
                     <td>@player.name</td>
                     <td>@player.level</td>
                     <td>@player.className</td>
-                    <td><button type="button" class="close"><a href="@routes.PlayerList.delete(player.name)">&times;</a></button></td>
+                    <td><button type="button" class="close" onclick="del('@routes.PlayerList.delete(player.name)')">&times;</button></td>
                 </tr>
             }
             </tbody>
