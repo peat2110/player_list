@@ -1,8 +1,27 @@
+@(players:List[Player])
 <!DOCTYPE html>
 <html>
     <head>
     </head>
     <body>
         <h1>Player List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Level</th>
+                    <th>Class</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(player <- players){
+                <tr>
+                    <td>@player.name</td>
+                    <td>@player.level</td>
+                    <td>@player.className</td>
+                </tr>
+            }
+            </tbody>
+        </table>
     </body>
 </html>
