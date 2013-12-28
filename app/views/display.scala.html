@@ -1,10 +1,5 @@
 @(players:List[Player])
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href="@routes.Assets.at("stylesheets/bootstrap.min.css")" rel="stylesheet" media="screen">
-    </head>
-    <body>
+    @main("Home"){
         <div class="page-header pager">
         <h1>Player List</h1>
         </div>
@@ -30,5 +25,4 @@
         </table>
         </div>
         </div>
-    </body>
-</html>
+}
