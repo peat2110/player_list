@@ -11,6 +11,7 @@
                     <th>Name</th>
                     <th>Level</th>
                     <th>Class</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -19,6 +20,7 @@
                     <td>@player.name</td>
                     <td>@player.level</td>
                     <td>@player.className</td>
+                    <td><button type="button" class="close"><a href="@routes.PlayerList.delete(player.name)">&times;</a></button></td>
                 </tr>
             }
             </tbody>
